@@ -28,8 +28,12 @@ public enum Chain {
     FANTOM(102, "FTM", "Fantom"),
 
     //LIGHTNING(1001, "BTC_LN", "Bitcoin Lightning"),
-    MATIC(1002, "MATIC", "Polygon Matic"),
+    POLYGON(1002, "POLYGON", "Polygon Matic"),
     RSK(1003, "RSK", "Bitcoin RSK"),
+
+    ARBITRUM(1004, "ARBITRUM", "Arbitrum"),
+    OPTIMISM(1005, "OPTIMISM", "Optimism"),
+    BSC(1006, "BSC", "Binance Smart Chain"),
 
     // Testnets
     TESTNET_MORDEN(10001, "MORDEN", "Morden Testnet"),

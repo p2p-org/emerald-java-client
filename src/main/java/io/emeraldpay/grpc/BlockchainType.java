@@ -2,24 +2,28 @@ package io.emeraldpay.grpc;
 
 public enum BlockchainType {
     BITCOIN,
-    ETHEREUM,
-    ETHEREUM_POS;
+    EVM_POW,
+    EVM_POS;
 
     public static BlockchainType from(Chain chain) {
         if (chain == Chain.TESTNET_ROPSTEN
+                || chain == Chain.POLYGON
+                || chain == Chain.OPTIMISM
+                || chain == Chain.BSC
                 || chain == Chain.TESTNET_GOERLI
-                || chain == Chain.ETHEREUM) {
-            return BlockchainType.ETHEREUM_POS;
+                || chain == Chain.ETHEREUM
+        ) {
+            return BlockchainType.EVM_POS;
         }
         if (chain == Chain.ETHEREUM_CLASSIC
-                || chain == Chain.MATIC
+                || chain == Chain.ARBITRUM
                 || chain == Chain.FANTOM
                 || chain == Chain.RSK
                 || chain == Chain.TESTNET_KOVAN
                 || chain == Chain.TESTNET_MORDEN
                 || chain == Chain.TESTNET_RINKEBY
         ) {
-            return BlockchainType.ETHEREUM;
+            return BlockchainType.EVM_POW;
         }
 
         if (chain == Chain.BITCOIN
