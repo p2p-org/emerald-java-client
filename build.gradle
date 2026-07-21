@@ -17,7 +17,7 @@ plugins {
     id 'groovy'
     id 'idea'
     id 'maven-publish'
-    id 'com.google.protobuf' version "0.9.1"
+    id 'com.google.protobuf' version "0.10.0"
     id 'jacoco'
     id "com.google.cloud.artifactregistry.gradle-plugin" version "2.1.4" apply false
 }
